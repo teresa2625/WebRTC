@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="keywords" content="WebRTC, HTML5, JavaScript" />
+<meta name="description" content="WebRTC Reference App" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<title>WebRTC client</title>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <span class="heading">
+      WebRTC
+    </span>
+  </div>
+
+<div class="container">
+  <div class="translate">
+      translate
+  </div>
+
+    <div class="videos">
+      <video id="localVideo" autoplay muted playsinline></video>
+      <video id="remoteVideo" autoplay playsinline></video>
+      <div class="button">
+        <button id="openVideo">Open</button>
+        <button id="closeVideo">Close</button>
+        <button id="unmute">Unmute</button>
+        <button id="mute">Mute</button>
+        <button id="call">Call</button>
+      </div>
+    </div>
+    
+    <div class="chatbox">
+      <div class="form-group">
+        <select class="form-control">
+          <option>language</option>
+        </select>
+      </div>
+      <div class="trans">
+        translate
+      </div>
+      <div class="form-group">
+        <select class="form-control">
+          <option>language</option>
+        </select>
+      </div>
+      <ul class="pages">
+        <li class="chat page">
+          <div class="chatArea">
+            <ul class="messages"></ul>
+          </div>
+          <input class="inputMessage" placeholder="Type here..."/>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="data">
+      data
+    </div>
+  </div>
+
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/main.js"></script>
+</body>
+</html>

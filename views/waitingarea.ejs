@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="keywords" content="WebRTC, HTML5, JavaScript" />
+  <meta name="description" content="WebRTC Reference App" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+  <title>Waiting Area</title>
+</head>
+<body>
+
+  <div class="container">
+    <span class="heading">
+      Waiting Area
+    </span>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Status</th>
+          <th scope="col">Caller</th>
+          <th scope="col">Telephone</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td id="status"><%= status %></td>
+          <td id="caller"> <a href="<%= link %>" target="_blank"><%= caller %></a></td>
+          <td id="phone"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button id="call">Call</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/waitingarea.js"></script>
+
+</body>
+</html>
